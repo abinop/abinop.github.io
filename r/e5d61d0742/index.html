@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="el"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Αναφορά ταχύτητας · poufaki.gr</title>
+<style>
+@font-face{font-family:"Commissioner";font-weight:400 800;src:url(../../fonts/commissioner-greek.woff2) format("woff2");unicode-range:U+0370-03FF}
+@font-face{font-family:"Commissioner";font-weight:400 800;src:url(../../fonts/commissioner-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:"JetBrains Mono";font-weight:400 600;src:url(../../fonts/jbmono-greek.woff2) format("woff2");unicode-range:U+0370-03FF}
+@font-face{font-family:"JetBrains Mono";font-weight:400 600;src:url(../../fonts/jbmono-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+20AC,U+2122,U+2212}
+:root{--bg:#f2eee5;--paper:#faf8f3;--ink:#141414;--ink2:#4a4741;--muted:#625e56;--line:#d9d3c6;
+  --bad:#b5341f;--mid:#9a6608;--ok:#1b7a50;
+  --display:"Commissioner",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--display)}
+.bad{color:var(--bad)} .mid{color:var(--mid)} .ok{color:var(--ok)}
+.ring{--c:var(--bad);width:var(--s);height:var(--s);border-radius:50%;display:grid;place-items:center;
+  background:radial-gradient(closest-side,var(--paper) 80%,transparent 81%),conic-gradient(var(--c) calc(var(--p)*1%),var(--line) 0)}
+.ring.mid{--c:var(--mid)} .ring.ok{--c:var(--ok)}
+.ring b{font-weight:800;letter-spacing:-.04em;color:var(--c);line-height:1}
+.browser{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 24px 50px -28px rgba(0,0,0,.4)}
+.browser .bar{display:flex;gap:6px;align-items:center;padding:9px 12px;background:#ece8de;border-bottom:1px solid var(--line)}
+.browser .bar i{width:9px;height:9px;border-radius:50%;background:#cfc9bc}
+.browser .bar span{margin-left:8px;font:12px var(--mono);color:var(--muted)}
+.browser img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top}
+.phone{background:#141414;border-radius:30px;padding:9px;box-shadow:0 24px 50px -20px rgba(0,0,0,.55)}
+.phone img{display:block;width:100%;border-radius:22px;aspect-ratio:9/18;object-fit:cover;object-position:top;background:#fff}
+
+body{font-size:17px;line-height:1.6}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px 0;flex-wrap:wrap}
+.brand{font-weight:700;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:10px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--ok)}
+.meta{font:13px var(--mono);color:var(--muted)}
+.hero{display:grid;grid-template-columns:1fr 220px;gap:36px;align-items:center;padding:28px 0 36px}
+.label{font:13px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--bad);margin:0 0 14px}
+h1{font-weight:800;font-size:clamp(34px,6vw,60px);line-height:1;letter-spacing:-.03em;margin:0 0 16px;word-break:break-word}
+.verdict{font-size:20px;color:var(--ink2);margin:0}
+.hero .ring{--s:200px} .hero .ring b{font-size:68px} .hero .ring small{display:block;font:13px var(--mono);color:var(--muted);text-align:center;margin-top:4px}
+.shots{position:relative;padding:0 120px 40px 0;margin:8px 0 48px}
+.shots .phone{position:absolute;right:0;bottom:0;width:190px}
+.shots:not(:has(.browser)){padding:0} .shots:not(:has(.browser)) .phone{position:static;width:240px}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:44px}
+.tile{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px}
+.tile .k{display:block;font-size:14px;color:var(--ink2);min-height:2.6em}
+.tile b{display:block;font-size:30px;font-weight:800;letter-spacing:-.02em;margin:6px 0}
+.tile .t{font:12px var(--mono);color:var(--muted)}
+section{border-top:2px solid var(--ink);padding:22px 0 26px}
+h2{font-size:26px;letter-spacing:-.02em;margin:0 0 12px}
+ul{margin:0;padding:0;list-style:none}
+li{position:relative;padding:9px 0 9px 26px;border-bottom:1px solid var(--line);color:var(--ink2)}
+li::before{content:"−";position:absolute;left:4px;color:var(--bad);font:600 16px var(--mono)}
+.sec{color:var(--ink2);margin:0;max-width:44em}
+.next{background:var(--ink);color:var(--bg);border-radius:22px;padding:32px;margin:26px 0 30px}
+.next h2{color:var(--bg);font-size:30px}
+.next p{margin:0 0 20px;max-width:40em;color:#d8d3c8}
+.contact{display:flex;flex-wrap:wrap;gap:10px}
+.contact a{background:var(--bg);color:var(--ink);text-decoration:none;font-weight:700;padding:12px 18px;border-radius:12px}
+.contact a.alt{background:transparent;color:var(--bg);border:1px solid #555}
+footer{font:12px/1.6 var(--mono);color:var(--muted);padding:0 0 40px}
+footer a{color:var(--ink)}
+.pdf{display:inline-block;margin-top:10px;font:600 14px var(--display);color:var(--ink)}
+@media screen and (max-width:760px){
+  .wrap{padding:0 16px}
+  .hero{grid-template-columns:1fr;gap:20px}
+  .hero .ring{--s:150px;order:-1} .hero .ring b{font-size:50px}
+  .shots{padding:0 70px 30px 0} .shots .phone{width:120px;border-radius:20px;padding:6px} .shots .phone img{border-radius:15px}
+  .tiles{grid-template-columns:1fr 1fr}
+  .next{padding:24px}
+}
+@media print{
+  @page{size:A4;margin:12mm}
+  html,body{background:#fff} body{font-size:12.5px;zoom:.8}
+  .wrap{max-width:none;padding:0}
+  header{padding:0 0 10px}
+  .hero{grid-template-columns:1fr 150px;padding:6px 0 14px;gap:20px}
+  .hero .ring{--s:140px} .hero .ring b{font-size:46px}
+  h1{font-size:36px} .verdict{font-size:15px}
+  .shots{padding:0 80px 14px 0;margin:0 0 14px;width:82%} .shots .phone{width:110px;border-radius:20px;padding:6px} .shots .phone img{border-radius:15px}
+  .shots:not(:has(.browser)){width:auto;padding:0} .shots:not(:has(.browser)) .phone{position:static;width:150px}
+  .browser,.phone{box-shadow:none}
+  .tiles{gap:8px;margin-bottom:16px} .tile{padding:10px} .tile b{font-size:20px}
+  section{padding:10px 0 12px;break-inside:avoid} h2{font-size:17px;margin-bottom:6px} li{padding:4px 0 4px 20px}
+  .next{padding:16px;margin:10px 0 12px;break-inside:avoid} .next h2{font-size:18px} .next p{margin-bottom:10px}
+  .contact a{padding:6px 10px}
+  .noprint{display:none}
+  .hero .ring{--s:112px} .hero .ring b{font-size:38px} h1{font-size:30px;margin-bottom:8px} .label{margin-bottom:8px}
+  .browser img{aspect-ratio:16/5.6} .browser .bar{padding:4px 10px} .shots .phone{width:96px}
+  .hero .ring small{font-size:9px} .tile{padding:7px 9px;border-radius:10px}
+  .next{padding:12px 16px;border-radius:14px} .next p{font-size:11.5px}
+  .sec{font-size:12px}
+  .tile .k{min-height:0;font-size:11.5px} .tile .t{font-size:10px} .tile b{font-size:18px;margin:3px 0}
+  li{padding:3px 0 3px 20px} section{padding:8px 0 8px}
+  footer{font-size:10px}
+}
+</style></head>
+<body><div class="wrap">
+<header>
+  <a class="brand" href="https://abinop.github.io/"><span class="dot"></span>Αλέξανδρος Μπινόπουλος</a>
+  <span class="meta">Αναφορά για το poufaki.gr · 26/10/2026</span>
+</header>
+<div class="hero">
+  <div>
+    <p class="label">Έλεγχος ταχύτητας από κινητό</p>
+    <h1>Το poufaki.gr από κινητό</h1>
+    <p class="verdict">Υπάρχει περιθώριο. Λίγα δευτερόλεπτα κάνουν διαφορά στις πωλήσεις.</p>
+  </div>
+  <div class="ring mid" style="--p:61"><div><b>61</b><small>/100 Google</small></div></div>
+</div>
+<div class="shots"><div class="browser"><div class="bar"><i></i><i></i><i></i><span>poufaki.gr</span></div><img src="desktop.jpg" alt="Το poufaki.gr σε υπολογιστή"></div><div class="phone"><img src="mobile.jpg" alt="Το poufaki.gr σε κινητό, όπως το είδε η Google"></div></div>
+<div class="tiles"><div class="tile"><span class="k">Βαθμολογία ταχύτητας</span><b class="mid">61/100</b><span class="t">Πάνω από 90 θεωρείται καλό</span></div><div class="tile"><span class="k">Εμφάνιση κύριου περιεχομένου</span><b class="bad">7,1 δευτ.</b><span class="t">Στόχος: κάτω από 2,5 δευτ.</span></div><div class="tile"><span class="k">Καθυστέρηση στο άγγιγμα</span><b class="ok">90 ms</b><span class="t">Στόχος: κάτω από 200 ms</span></div><div class="tile"><span class="k">Σταθερότητα σελίδας</span><b class="ok">0,00</b><span class="t">Στόχος: κάτω από 0,1</span></div></div>
+<section><h2>Τι καθυστερεί τη σελίδα</h2><ul><li>Ο server χρειάζεται περίπου 2,2 δευτερόλεπτα μόνο για να αρχίσει να στέλνει την αρχική σελίδα.</li><li>Δεν εντόπισα page cache, το πιο απλό βήμα για γρηγορότερη σελίδα.</li><li>Η αρχική σελίδα φορτώνει 79 scripts και 42 αρχεία CSS.</li><li>Οι εικόνες σερβίρονται σε JPG/PNG αντί για WebP, που είναι αισθητά ελαφρύτερο.</li><li>Περίπου 121 KB CSS φορτώνει χωρίς να χρησιμοποιείται.</li></ul></section><section><h2>Google &amp; SEO</h2><ul><li>Η αρχική σελίδα δεν έχει επικεφαλίδα H1.</li><li>Η αρχική σελίδα δεν έχει meta description, οπότε η Google διαλέγει μόνη της τι κείμενο θα δείξει στα αποτελέσματα.</li><li>Το footer γράφει ακόμα © 2021, μια λεπτομέρεια που δείχνει στους πελάτες ότι το site δεν ενημερώνεται.</li></ul></section><section><h2>Ασφάλεια &amp; ενημερώσεις</h2><p class="sec">Εντόπισα <b>3 σημεία</b> που αφορούν την ασφάλεια, όπως παλιές εκδόσεις WordPress, WooCommerce ή PHP. Δεν τα δημοσιεύω σε αυτή τη σελίδα. Σας τα έχω στείλει απευθείας στο email.</p></section>
+<div class="next">
+  <h2>Όλα αυτά διορθώνονται.</h2>
+  <p>Κάθε αλλαγή γίνεται πρώτα σε αντίγραφο του site, οπότε το κατάστημα δεν σταματά. Αν θέλετε, τα βλέπουμε μαζί σε ένα δεκάλεπτο τηλεφώνημα, χωρίς δέσμευση.</p>
+  <div class="contact">
+    <a href="tel:+306908691356">690 869 1356</a>
+    <a href="mailto:aiabinop@gmail.com?subject=%CE%91%CE%BD%CE%B1%CF%86%CE%BF%CF%81%CE%AC%20poufaki.gr">aiabinop@gmail.com</a>
+    <a class="alt noprint" href="https://abinop.github.io/">Περισσότερα για μένα →</a>
+  </div>
+</div>
+<footer>
+  Η μέτρηση έγινε στις 26/10/2026 με το Google PageSpeed Insights, όπως τη βλέπει ένα κινητό σε δίκτυο 4G. Οι τιμές αλλάζουν λίγο από μέτρηση σε μέτρηση.
+  Ο έλεγχος έγινε μόνο από όσα φαίνονται δημόσια, χωρίς πρόσβαση στο site.<br>
+  <a class="pdf noprint" href="report.pdf" download>Κατεβάστε την αναφορά σε PDF ↓</a>
+</footer>
+</div></body></html>
