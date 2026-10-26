@@ -9,7 +9,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://abinop.github.io/">
 <meta property="og:title" content="Αλέξανδρος Μπινόπουλος · Συντήρηση WordPress &amp; WooCommerce">
-<meta property="og:description" content="Το e-shop σας γρήγορο, ασφαλές και ενημερωμένο. Αναβάθμιση από €450 + ΦΠΑ, συντήρηση €49/μήνα + ΦΠΑ.">
+<meta property="og:description" content="Το e-shop σας γρήγορο, ασφαλές και ενημερωμένο. Αναβάθμιση, ασφάλεια και μηνιαία συντήρηση για WordPress και WooCommerce.">
 <meta property="og:image" content="https://abinop.github.io/img/alexandros.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141414'/%3E%3Ccircle cx='48' cy='16' r='6' fill='%23d9432b'/%3E%3Ctext x='30' y='44' font-family='Arial' font-weight='800' font-size='26' fill='%23f2eee5' text-anchor='middle'%3EAB%3C/text%3E%3C/svg%3E">
 <link rel="preload" href="fonts/commissioner-greek.woff2" as="font" type="font/woff2" crossorigin>
@@ -120,8 +120,7 @@ h2{font-weight:800;font-size:clamp(34px,5.4vw,64px);line-height:1;letter-spacing
 .plan.dark{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .plan .tag{font:600 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
 .plan h3{font-size:28px;letter-spacing:-.02em;margin:10px 0 6px}
-.amount{font-weight:800;font-size:64px;letter-spacing:-.04em;line-height:1;margin:14px 0 4px}
-.amount small{font-size:16px;font-weight:500;letter-spacing:0;opacity:.7}
+.terms{font:15px/1.5 var(--mono);margin:8px 0 0;opacity:.8}
 .plan ul{list-style:none;padding:0;margin:22px 0 0}
 .plan li{padding:12px 0 12px 30px;border-top:1px solid color-mix(in srgb,currentColor 15%,transparent);position:relative;font-size:16px}
 .plan li::before{content:"✓";position:absolute;left:2px;top:12px;color:var(--green);font-weight:700}
@@ -196,7 +195,6 @@ footer{padding:30px 0 44px;color:var(--muted);font:13px var(--mono);display:flex
   .diff-row .now{border-top:1px dashed var(--line)}
   .plans,.stats{grid-template-columns:1fr}
   .plan{padding:24px}
-  .amount{font-size:54px}
   .steps{grid-template-columns:1fr}
   .proof li{grid-template-columns:1fr;gap:4px}
   .faq summary{grid-template-columns:40px 1fr 24px}
@@ -257,14 +255,14 @@ footer{padding:30px 0 44px;color:var(--muted);font:13px var(--mono);display:flex
 </section>
 
 <section id="services">
-  <p class="label rv" data-i18n="l2">02 · Υπηρεσίες &amp; τιμές</p>
-  <h2 class="rv" data-i18n="svcH">Δύο υπηρεσίες. Ξεκάθαρες τιμές.</h2>
-  <p class="lead rv" data-i18n="svcLead">Όλες οι τιμές είναι χωρίς ΦΠΑ.</p>
+  <p class="label rv" data-i18n="l2">02 · Υπηρεσίες</p>
+  <h2 class="rv" data-i18n="svcH">Δύο υπηρεσίες. Χωρίς εκπλήξεις.</h2>
+  <p class="lead rv" data-i18n="svcLead">Σας λέω την τιμή πριν ξεκινήσουμε, αφού δω το site σας.</p>
   <div class="plans">
     <div class="plan dark rv">
       <span class="tag" data-i18n="s1kind">Εφάπαξ</span>
       <h3 data-i18n="s1h">Αναβάθμιση &amp; Ασφάλεια</h3>
-      <div class="amount"><small data-i18n="from">από</small> €450 <small data-i18n="vat">+ ΦΠΑ</small></div>
+      <p class="terms" data-i18n="s1terms">Τιμή μετά από μια πρώτη ματιά στο site σας</p>
       <ul>
         <li data-i18n="s1a">Αναβάθμιση WordPress, WooCommerce και PHP 8.x, πρώτα σε αντίγραφο του site</li>
         <li data-i18n="s1b">Caching για γρηγορότερη φόρτωση σελίδων</li>
@@ -276,7 +274,7 @@ footer{padding:30px 0 44px;color:var(--muted);font:13px var(--mono);display:flex
     <div class="plan rv">
       <span class="tag" data-i18n="s2kind">Μηνιαία</span>
       <h3 data-i18n="s2h">Συντήρηση</h3>
-      <div class="amount">€49 <small data-i18n="perMonth">/μήνα + ΦΠΑ</small></div>
+      <p class="terms" data-i18n="s2terms">Σταθερή μηνιαία χρέωση, χωρίς δέσμευση</p>
       <ul>
         <li data-i18n="s2a">Τακτικές ενημερώσεις WordPress, θέματος και plugins</li>
         <li data-i18n="s2b">Καθημερινά αντίγραφα ασφαλείας (backups)</li>
@@ -285,7 +283,6 @@ footer{padding:30px 0 44px;color:var(--muted);font:13px var(--mono);display:flex
       </ul>
     </div>
   </div>
-  <p class="note rv" data-i18n="svcNote">Η τελική τιμή της αναβάθμισης εξαρτάται από το μέγεθος και την κατάσταση του site. Τη λέω πριν ξεκινήσουμε.</p>
 </section>
 
 <section>
@@ -341,7 +338,7 @@ footer{padding:30px 0 44px;color:var(--muted);font:13px var(--mono);display:flex
 </section>
 
 <footer>
-  <span data-i18n="foot">© 2026 Αλέξανδρος Μπινόπουλος · Οι τιμές δεν περιλαμβάνουν ΦΠΑ.</span>
+  <span data-i18n="foot">© 2026 Αλέξανδρος Μπινόπουλος</span>
   <span data-i18n="area">Αθήνα · εξυπηρέτηση σε όλη την Ελλάδα, εξ αποστάσεως</span>
 </footer>
 </div>
@@ -367,15 +364,14 @@ footer{padding:30px 0 44px;color:var(--muted);font:13px var(--mono);display:flex
     d3a:"Heavy images that load slowly on phones", d3b:"WebP images and caching: pages open fast",
     d4a:"No recent backup", d4b:"Daily backup, ready to restore",
     d5a:"You hear from a customer that the site is down", d5b:"I hear first, and I fix it",
-    l2:"02 · Services & prices", svcH:"Two services. Clear prices.", svcLead:"All prices exclude VAT.",
-    s1kind:"One-off", s1h:"Upgrade & Security", from:"from", vat:"+ VAT",
+    l2:"02 · Services", svcH:"Two services. No surprises.", svcLead:"I tell you the price before we start, once I've seen your site.",
+    s1kind:"One-off", s1h:"Upgrade & Security", s1terms:"Priced after a first look at your site",
     s1a:"WordPress, WooCommerce and PHP 8.x upgrade, done on a copy of the site first",
     s1b:"Caching for faster page loads", s1c:"WebP images: lighter files, same quality",
     s1d:"Security hardening for the site and the admin area", s1e:"Basic SEO fixes",
-    s2kind:"Monthly", s2h:"Maintenance", perMonth:"/month + VAT",
+    s2kind:"Monthly", s2h:"Maintenance", s2terms:"Fixed monthly fee, no contract",
     s2a:"Regular WordPress, theme and plugin updates", s2b:"Daily backups",
     s2c:"Uptime monitoring: if the site goes down, I know straight away", s2d:"Regular scan for malicious code",
-    svcNote:"The final upgrade price depends on the size and state of the site. I tell you before we start.",
     l3:"03 · How I work", howH:"Your shop keeps selling while I work.",
     h1b:"Send me the address", h1t:"I look at your e-shop and tell you what I see and what I suggest, before we agree on anything.",
     h2b:"I work on a copy", h2t:"Every change is made and tested on a copy first, not on the live shop.",
@@ -397,7 +393,7 @@ footer{padding:30px 0 44px;color:var(--muted);font:13px var(--mono);display:flex
     q5:"Is there a contract for maintenance?", a5:"No. You pay monthly and can stop whenever you like.",
     q6:"What do you need to get started?", a6:"Your e-shop's address for a first look. If we go ahead, access to the admin area and the hosting.",
     l6:"06 · Contact", cH:"Send me the address.", cLead:"Or give me a call. I reply the same or the next working day.",
-    phone:"Phone", foot:"© 2026 Alexandros Binopoulos · Prices exclude VAT.", area:"Athens · serving all of Greece, remotely"
+    phone:"Phone", foot:"© 2026 Alexandros Binopoulos", area:"Athens · serving all of Greece, remotely"
   };
 
   var msg = {
@@ -452,6 +448,8 @@ footer{padding:30px 0 44px;color:var(--muted);font:13px var(--mono);display:flex
     btn.textContent = next === "en" ? "ΕΛ" : "EN";
     btn.lang = next === "en" ? "el" : "en";
     btn.title = next === "en" ? "Ελληνικά" : "English";
+    var ready = document.querySelector("#log [data-ready]");
+    if (ready) ready.textContent = msg[next].ready;
   }
 
   var start = new URLSearchParams(location.search).get("lang");
@@ -569,7 +567,9 @@ footer{padding:30px 0 44px;color:var(--muted);font:13px var(--mono);display:flex
       .then(function(){ clearTimeout(timer); submit.disabled = false; });
   });
 
-  line(span(msg[lang].ready, "dim"));
+  var readySpan = span(msg[lang].ready, "dim");
+  readySpan.dataset.ready = "";
+  line(readySpan);
 })();
 </script>
 </body>
