@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Αλέξανδρος Μπινόπουλος · Συντήρηση WordPress &amp; WooCommerce</title>
+<meta name="description" content="Συντήρηση, αναβάθμιση και ασφάλεια για e-shops σε WordPress και WooCommerce. 25+ χρόνια εμπειρία στο λογισμικό.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://abinop.github.io/">
+<meta property="og:title" content="Αλέξανδρος Μπινόπουλος · Συντήρηση WordPress &amp; WooCommerce">
+<meta property="og:description" content="Το e-shop σας γρήγορο, ασφαλές και ενημερωμένο. Αναβάθμιση από €450 + ΦΠΑ, συντήρηση €49/μήνα + ΦΠΑ.">
+<meta property="og:image" content="https://abinop.github.io/img/alexandros.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f5f4a'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='28' fill='white' text-anchor='middle'%3EAB%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#fbfaf7; --surface:#ffffff; --ink:#16201c; --ink2:#46524d; --muted:#6c7772;
+  --line:#e4e2db; --accent:#1f5f4a; --accent-ink:#ffffff; --accent-soft:#e8f1ec;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#121614; --surface:#1a201d; --ink:#eef2ef; --ink2:#c2cbc6; --muted:#8f9a95;
+    --line:#2b332f; --accent:#6fc2a0; --accent-ink:#0d1a14; --accent-soft:#1d2b25;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans","Helvetica Neue",Arial,sans-serif;
+  font-size:17px;line-height:1.6}
+a{color:var(--accent)}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+header.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.brand{font-weight:700;letter-spacing:-.2px;text-decoration:none;color:var(--ink)}
+.lang{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;
+  padding:6px 14px;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+
+.hero{display:grid;grid-template-columns:1fr 200px;gap:40px;align-items:center;padding:36px 0 56px}
+.hero h1{font-size:clamp(30px,5.2vw,46px);line-height:1.12;letter-spacing:-.8px;margin:0 0 18px}
+.hero p{color:var(--ink2);margin:0 0 26px;max-width:36em}
+.hero img{width:200px;height:200px;border-radius:24px;object-fit:cover;display:block}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 22px;border-radius:12px;font-weight:600;text-decoration:none;font-size:16px}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{border:1px solid var(--line);color:var(--ink);background:var(--surface)}
+
+section{padding:48px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(24px,3.6vw,30px);letter-spacing:-.4px;margin:0 0 10px}
+.lead{color:var(--ink2);margin:0 0 28px;max-width:40em}
+
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card h3{margin:0 0 6px;font-size:19px}
+.card p{margin:0;color:var(--ink2);font-size:16px}
+
+.price{font-size:32px;font-weight:700;letter-spacing:-.6px;margin:6px 0 2px}
+.price small{font-size:15px;font-weight:500;color:var(--muted);letter-spacing:0}
+.kind{display:inline-block;font-size:13px;font-weight:600;color:var(--accent);background:var(--accent-soft);
+  padding:3px 10px;border-radius:999px}
+ul.ticks{list-style:none;margin:16px 0 0;padding:0}
+ul.ticks li{position:relative;padding-left:28px;margin:0 0 10px;color:var(--ink2);font-size:16px}
+ul.ticks li::before{content:"";position:absolute;left:2px;top:7px;width:14px;height:8px;
+  border-left:2.5px solid var(--accent);border-bottom:2.5px solid var(--accent);transform:rotate(-45deg)}
+.note{color:var(--muted);font-size:14px;margin:16px 0 0}
+
+ol.steps{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+ol.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;color:var(--ink2);font-size:16px}
+ol.steps li::before{content:counter(s);display:flex;align-items:center;justify-content:center;width:30px;height:30px;
+  border-radius:50%;background:var(--accent-soft);color:var(--accent);font-weight:700;margin-bottom:10px}
+ol.steps b{display:block;color:var(--ink);margin-bottom:4px}
+
+.proof{list-style:none;margin:0;padding:0}
+.proof li{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.proof li:last-child{border-bottom:0}
+.proof .when{color:var(--muted);font-weight:600;font-size:15px;font-variant-numeric:tabular-nums}
+.proof b{color:var(--ink)}
+.proof span{color:var(--ink2)}
+
+.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.contact a.card{text-decoration:none;color:var(--ink);display:block}
+.contact .label{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.6px}
+.contact .val{font-size:19px;font-weight:600;margin-top:4px;word-break:break-word}
+
+footer{padding:28px 0 40px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+
+@media (max-width:820px){
+  .grid3,.contact{grid-template-columns:1fr}
+  .grid2{grid-template-columns:1fr}
+  ol.steps{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .hero{grid-template-columns:1fr;gap:24px;padding:16px 0 40px}
+  .hero img{width:120px;height:120px;border-radius:20px;order:-1}
+  ol.steps{grid-template-columns:1fr}
+  .proof li{grid-template-columns:1fr;gap:2px}
+  .btn{flex:1 1 100%;text-align:center}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <a class="brand" href="#" data-i18n="brand">Αλέξανδρος Μπινόπουλος</a>
+  <button class="lang" id="lang" type="button" aria-label="Switch to English">EN</button>
+</header>
+
+<div class="hero">
+  <div>
+    <h1 data-i18n="h1">Το e-shop σας γρήγορο, ασφαλές και ενημερωμένο.</h1>
+    <p data-i18n="intro">Γράφω λογισμικό εδώ και πάνω από 25 χρόνια. Αναλαμβάνω συντήρηση, αναβάθμιση και «διάσωση» για e-shops σε WordPress και WooCommerce. Μιλάτε απευθείας μαζί μου, και ξέρετε πάντα τι έγινε και γιατί.</p>
+    <div class="cta">
+      <a class="btn primary" href="#contact" data-i18n="cta1">Επικοινωνία</a>
+      <a class="btn ghost" href="#services" data-i18n="cta2">Υπηρεσίες &amp; τιμές</a>
+    </div>
+  </div>
+  <img src="img/alexandros.jpg" width="200" height="200" alt="Αλέξανδρος Μπινόπουλος" data-i18n-alt="photoAlt">
+</div>
+
+<section>
+  <h2 data-i18n="whyH">Γιατί έχει σημασία</h2>
+  <p class="lead" data-i18n="whyLead">Ένα e-shop που δεν έχει ενημερωθεί εδώ και καιρό συνήθως «δουλεύει», μέχρι τη μέρα που δεν δουλεύει.</p>
+  <div class="grid3">
+    <div class="card"><h3 data-i18n="w1h">Ασφάλεια</h3><p data-i18n="w1p">Τα παλιά plugins και οι παλιές εκδόσεις WordPress είναι ο πιο συνηθισμένος τρόπος να παραβιαστεί ένα site. Ένα hacked κατάστημα χάνει πελάτες και θέσεις στο Google.</p></div>
+    <div class="card"><h3 data-i18n="w2h">Ταχύτητα</h3><p data-i18n="w2p">Οι περισσότεροι αγοραστές μπαίνουν από το κινητό. Αν η σελίδα αργεί, φεύγουν πριν δουν το προϊόν.</p></div>
+    <div class="card"><h3 data-i18n="w3h">Πωλήσεις</h3><p data-i18n="w3p">Ένα γρήγορο και σταθερό κατάστημα σημαίνει λιγότερα εγκαταλελειμμένα καλάθια και περισσότερες ολοκληρωμένες παραγγελίες.</p></div>
+  </div>
+</section>
+
+<section id="services">
+  <h2 data-i18n="svcH">Υπηρεσίες &amp; τιμές</h2>
+  <p class="lead" data-i18n="svcLead">Ξεκάθαρες τιμές, χωρίς εκπλήξεις. Όλες οι τιμές είναι χωρίς ΦΠΑ.</p>
+  <div class="grid2">
+    <div class="card">
+      <span class="kind" data-i18n="s1kind">Εφάπαξ</span>
+      <h3 style="margin-top:12px" data-i18n="s1h">Αναβάθμιση &amp; Ασφάλεια</h3>
+      <div class="price"><small data-i18n="from">από</small> €450 <small data-i18n="vat">+ ΦΠΑ</small></div>
+      <ul class="ticks">
+        <li data-i18n="s1a">Αναβάθμιση WordPress, WooCommerce και PHP 8.x, πρώτα σε αντίγραφο του site, ώστε το κατάστημά σας να μη ρισκάρει τίποτα</li>
+        <li data-i18n="s1b">Caching για γρηγορότερη φόρτωση σελίδων</li>
+        <li data-i18n="s1c">Μετατροπή εικόνων σε WebP: ελαφρύτερες εικόνες, ίδια ποιότητα</li>
+        <li data-i18n="s1d">Θωράκιση ασφαλείας του site και του διαχειριστικού</li>
+        <li data-i18n="s1e">Βασικές διορθώσεις SEO</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="kind" data-i18n="s2kind">Μηνιαία</span>
+      <h3 style="margin-top:12px" data-i18n="s2h">Συντήρηση</h3>
+      <div class="price">€49 <small data-i18n="perMonth">/μήνα + ΦΠΑ</small></div>
+      <ul class="ticks">
+        <li data-i18n="s2a">Τακτικές ενημερώσεις WordPress, θέματος και plugins</li>
+        <li data-i18n="s2b">Καθημερινά αντίγραφα ασφαλείας (backups)</li>
+        <li data-i18n="s2c">Παρακολούθηση λειτουργίας: αν το site πέσει, το μαθαίνω αμέσως</li>
+        <li data-i18n="s2d">Τακτικός έλεγχος ασφαλείας για κακόβουλο κώδικα</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note" data-i18n="svcNote">Η τελική τιμή της αναβάθμισης εξαρτάται από το μέγεθος και την κατάσταση του site. Τη λέω πριν ξεκινήσουμε.</p>
+</section>
+
+<section>
+  <h2 data-i18n="howH">Πώς δουλεύω</h2>
+  <p class="lead" data-i18n="howLead">Το κατάστημά σας συνεχίζει να πουλάει όσο δουλεύω.</p>
+  <ol class="steps">
+    <li><b data-i18n="h1b">Μου στέλνετε τη διεύθυνση</b><span data-i18n="h1t">Κοιτάζω το e-shop και σας λέω τι βλέπω και τι προτείνω, πριν συμφωνήσουμε οτιδήποτε.</span></li>
+    <li><b data-i18n="h2b">Δουλεύω σε αντίγραφο</b><span data-i18n="h2t">Όλες οι αλλαγές γίνονται και ελέγχονται πρώτα σε αντίγραφο, όχι στο live κατάστημα.</span></li>
+    <li><b data-i18n="h3b">Μεταφορά με ασφάλεια</b><span data-i18n="h3t">Περνάω τις αλλαγές σε ώρα χαμηλής κίνησης, με πλήρες backup για κάθε ενδεχόμενο.</span></li>
+    <li><b data-i18n="h4b">Σύντομη αναφορά</b><span data-i18n="h4t">Παίρνετε σε απλά λόγια τι έγινε, τι βελτιώθηκε και τι να προσέξετε.</span></li>
+  </ol>
+</section>
+
+<section>
+  <h2 data-i18n="proofH">Εμπειρία</h2>
+  <ul class="proof">
+    <li><span class="when">2021 – 2023</span><div><b data-i18n="p1b">ΕΟΠΠΕΠ · europass.eoppep.gr</b><br><span data-i18n="p1t">Σύμβαση τεχνικής υποστήριξης και συντήρησης για τον ελληνικό ιστότοπο Europass: διορθώσεις, ανασχεδιασμοί και αναφορές, πάντα μέσα στις προθεσμίες της σύμβασης.</span></div></li>
+    <li><span class="when" data-i18n="p2when">Πρόσφατα</span><div><b data-i18n="p2b">Διάσωση &amp; θωράκιση WordPress</b><br><span data-i18n="p2t">Για ελληνικές επιχειρήσεις: έλεγχοι για malware και καθαρισμός, επαναφορά πυρήνα, αναβαθμίσεις σε PHP 8.3, αλλαγή κωδικών, custom plugins και εργασίες WooCommerce.</span></div></li>
+    <li><span class="when">2017 –</span><div><b data-i18n="p3b">Επικεφαλής μηχανικός λογισμικού</b><br><span data-i18n="p3t">Σε εταιρεία εκπαιδευτικής τεχνολογίας του Ηνωμένου Βασιλείου: υπεύθυνος για εφαρμογή και υπηρεσίες σε παραγωγή, με καθημερινούς χρήστες σε σχολεία.</span></div></li>
+    <li><span class="when">2007 – 2015</span><div><b data-i18n="p4b">Ψηφιακό γραφείο</b><br><span data-i18n="p4t">Ιδιοκτήτης και τεχνικός υπεύθυνος γραφείου με έργα web, e-commerce και εφαρμογών, με ομάδα έως 10 ατόμων.</span></div></li>
+    <li><span class="when">2000 –</span><div><b data-i18n="p5b">25+ χρόνια στο λογισμικό</b><br><span data-i18n="p5t">Από πλατφόρμα online συναλλαγών χρηματιστηριακής εταιρείας μέχρι εφαρμογές κινητών και e-shops.</span></div></li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2 data-i18n="cH">Επικοινωνία</h2>
+  <p class="lead" data-i18n="cLead">Στείλτε μου τη διεύθυνση του e-shop σας ή πάρτε με τηλέφωνο. Απαντώ μέσα στην ίδια ή την επόμενη εργάσιμη.</p>
+  <div class="contact">
+    <a class="card" href="tel:+306908691356"><div class="label" data-i18n="phone">Τηλέφωνο</div><div class="val">690 869 1356</div></a>
+    <a class="card" href="mailto:aiabinop@gmail.com?subject=E-shop"><div class="label">Email</div><div class="val">aiabinop@gmail.com</div></a>
+    <a class="card" href="https://www.linkedin.com/in/abinop" rel="noopener"><div class="label">LinkedIn</div><div class="val">in/abinop</div></a>
+  </div>
+  <p class="note" data-i18n="area">Αθήνα · Εξυπηρέτηση σε όλη την Ελλάδα, εξ αποστάσεως.</p>
+</section>
+
+<footer data-i18n="foot">© 2026 Αλέξανδρος Μπινόπουλος · Οι τιμές δεν περιλαμβάνουν ΦΠΑ.</footer>
+</div>
+
+<script>
+(function(){
+  var en = {
+    brand:"Alexandros Binopoulos",
+    h1:"Your e-shop: fast, secure and up to date.",
+    intro:"I have been writing software for more than 25 years. I maintain, upgrade and rescue WordPress and WooCommerce e-shops. You talk to me directly, and you always know what was done and why.",
+    cta1:"Get in touch", cta2:"Services & prices", photoAlt:"Alexandros Binopoulos",
+    whyH:"Why it matters",
+    whyLead:"A shop that hasn't been updated in a while usually “works”, until the day it doesn't.",
+    w1h:"Security", w1p:"Outdated plugins and old WordPress versions are the most common way sites get hacked. A hacked shop loses customers and Google rankings.",
+    w2h:"Speed", w2p:"Most shoppers arrive on a phone. If the page is slow, they leave before they see the product.",
+    w3h:"Sales", w3p:"A fast, stable shop means fewer abandoned carts and more completed orders.",
+    svcH:"Services & prices", svcLead:"Clear prices, no surprises. All prices exclude VAT.",
+    s1kind:"One-off", s1h:"Upgrade & Security", from:"from", vat:"+ VAT",
+    s1a:"WordPress, WooCommerce and PHP 8.x upgrade, done on a copy of the site first so your shop is never at risk",
+    s1b:"Caching for faster page loads", s1c:"Images converted to WebP: lighter files, same quality",
+    s1d:"Security hardening for the site and the admin area", s1e:"Basic SEO fixes",
+    s2kind:"Monthly", s2h:"Maintenance", perMonth:"/month + VAT",
+    s2a:"Regular WordPress, theme and plugin updates", s2b:"Daily backups",
+    s2c:"Uptime monitoring: if the site goes down, I know straight away", s2d:"Regular security scan for malicious code",
+    svcNote:"The final upgrade price depends on the size and state of the site. I tell you before we start.",
+    howH:"How I work", howLead:"Your shop keeps selling while I work.",
+    h1b:"Send me the address", h1t:"I look at your e-shop and tell you what I see and what I suggest, before we agree on anything.",
+    h2b:"I work on a copy", h2t:"Every change is made and tested on a copy first, not on the live shop.",
+    h3b:"Safe switch-over", h3t:"I move the changes live at a quiet time, with a full backup just in case.",
+    h4b:"Short report", h4t:"You get a plain-language summary of what was done, what improved and what to watch.",
+    proofH:"Experience",
+    p1b:"EOPPEP · europass.eoppep.gr", p1t:"Technical support and maintenance contract for the Greek Europass website: fixes, redesigns and reports, always within the contract deadlines.",
+    p2when:"Recent", p2b:"WordPress rescue & hardening", p2t:"For Greek businesses: malware audits and clean-up, core restores, PHP 8.3 upgrades, credential rotation, custom plugins and WooCommerce work.",
+    p3b:"Head of Engineering", p3t:"At a UK education-technology company: responsible for a production app and its services, used daily in schools.",
+    p4b:"Digital agency", p4t:"Owner and technical lead of an agency delivering web, e-commerce and app projects, with a team of up to 10.",
+    p5b:"25+ years in software", p5t:"From a brokerage's online trading platform to mobile apps and e-shops.",
+    cH:"Contact", cLead:"Send me your e-shop's address or give me a call. I reply the same or the next working day.",
+    phone:"Phone", area:"Athens · Serving all of Greece, remotely.",
+    foot:"© 2026 Alexandros Binopoulos · Prices exclude VAT."
+  };
+  var nodes = document.querySelectorAll("[data-i18n]");
+  var el = {};
+  nodes.forEach(function(n){ el[n.dataset.i18n] = n.textContent; });
+  var img = document.querySelector("[data-i18n-alt]");
+  el.photoAlt = img.alt;
+  var docTitle = document.title;
+  var btn = document.getElementById("lang");
+
+  function apply(lang){
+    var dict = lang === "en" ? en : el;
+    nodes.forEach(function(n){ var v = dict[n.dataset.i18n]; if (v) n.textContent = v; });
+    img.alt = dict.photoAlt;
+    document.documentElement.lang = lang;
+    document.title = lang === "en" ? "Alexandros Binopoulos · WordPress & WooCommerce maintenance" : docTitle;
+    btn.textContent = lang === "en" ? "ΕΛ" : "EN";
+    btn.setAttribute("aria-label", lang === "en" ? "Αλλαγή σε Ελληνικά" : "Switch to English");
+  }
+
+  var start = new URLSearchParams(location.search).get("lang");
+  if (!start) { try { start = localStorage.getItem("lang"); } catch (e) {} }
+  if (start === "en") apply("en");
+
+  btn.addEventListener("click", function(){
+    var next = document.documentElement.lang === "en" ? "el" : "en";
+    apply(next);
+    try { localStorage.setItem("lang", next); } catch (e) {}
+  });
+})();
+</script>
+</body>
+</html>
