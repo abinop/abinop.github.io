@@ -4,6 +4,16 @@ One-page site for WordPress / WooCommerce maintenance services. Static HTML, no 
 
 - `index.html` — the whole site, Greek by default; English via the EN button or `?lang=en`
 - `img/alexandros.jpg` — profile photo
+- `fonts/` — Commissioner and JetBrains Mono (OFL), Greek + Latin subsets, self-hosted for speed
+
+## Speed check (hero terminal)
+
+The checker calls the Google PageSpeed Insights API. Google's keyless quota is usually used up, so without a key it falls back to a link to pagespeed.web.dev.
+
+To show results on the page itself:
+1. Google Cloud Console → create a project → enable **PageSpeed Insights API**.
+2. Credentials → **Create API key** → Application restrictions: **Websites**, add `https://abinop.github.io/*` → API restrictions: PageSpeed Insights API only.
+3. Put the key in `index.html`: `var PSI_KEY = "...";` (it is public by design; the referrer restriction protects it).
 
 ## Preview locally
 
